@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finnkino</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="events.js"></script>
+    <script src="ui.js"></script>
+    <script src="api.js"></script>
+</head>
+
+<body>
+    <h1>Finnkino</h1>
+    <div id="areaDiv">
+        <select id="selectArea">
+            <!-- Areas will be added here by JS -->
+        </select>
+
+        <!-- Tab selection -->
+        <div class="tabDiv">
+            <button id="eventsTab" class="tabLink">Events</button>
+            <button id="schedulesTab" class="tabLink">Schedules</button>
+            <button id="newsTab" class="tabLink">News</button>
+        </div>
+
+        <!-- Events -->
+        <div id="eventsDiv" class="tabContent">
+            <label>Search: </label>
+            <input type="text" id="eventSearch">
+
+            <!-- Events will be added here by JS -->
+            <table id="eventsTable">
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Age rating</th>
+                    <th>Event type</th>
+                    <th>Genres</th>
+                    <th>Synopsis</th>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Schedules -->
+        <div id="schedulesDiv" class="tabContent">
+            <label>Search: </label>
+            <input type="text" id="scheduleSearch">
+
+            <!-- Schedules will be added here by JS -->
+            <table id="scheduleTable">
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Age rating</th>
+                    <th>Auditorium</th>
+                    <th>Starting time</th>
+                    <th>Length</th>
+                </tr>
+            </table>
+        </div>
+
+        <!-- News -->
+        <div id="newsDiv" class="tabContent">
+            <div>
+                <select id="newsCategories">
+                    <!-- News categories will be added here by JS -->
+                </select>
+            </div>
+            <div>
+                <label>Search: </label>
+                <input type="text" id="newsSearch">
+
+                <!-- News will be added here by JS -->
+                <table id="newsTable">
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Published</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
