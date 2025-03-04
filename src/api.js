@@ -72,7 +72,7 @@ function getSchedule(id) {
                 // Create a new row in the schedule table
                 const newScheduleRow = scheduleTable.insertRow(-1);
                 newScheduleRow.className = 'scheduleRow';
-                newScheduleRow.insertCell(0).innerHTML = '<img src="' + images[0].querySelector('EventSmallImagePortrait').innerHTML + '">';
+                newScheduleRow.insertCell(0).innerHTML = '<img src="' + images[0].querySelector('EventSmallImagePortrait').innerHTML.replace('http:', 'https:') + '">';
                 newScheduleRow.insertCell(1).innerHTML = '<a href="' + eventUrl.innerHTML + '" target="_blank">' + title.innerHTML + '</a>';
                 newScheduleRow.insertCell(2).textContent = auditorium.innerHTML;
                 newScheduleRow.insertCell(3).textContent = Number.isNaN(ratingInt) ? '' : ratingInt;
@@ -115,7 +115,7 @@ function getEvents(id) {
                 // Create a new row in the events table
                 const newEventRow = eventsTable.insertRow(-1);
                 newEventRow.className = 'eventRow';
-                newEventRow.insertCell(0).innerHTML = '<img src="' + images[0].querySelector('EventSmallImagePortrait').innerHTML + '">';
+                newEventRow.insertCell(0).innerHTML = '<img src="' + images[0].querySelector('EventSmallImagePortrait').innerHTML.replace('http:', 'https:') + '">';
                 newEventRow.insertCell(1).innerHTML = '<a href="' + eventUrl.innerHTML + '" target="_blank">' + title.innerHTML + '</a>';
                 newEventRow.insertCell(2).textContent = Number.isNaN(ratingInt) ? '' : ratingInt;
                 newEventRow.insertCell(3).textContent = eventType.innerHTML;
@@ -186,7 +186,7 @@ function getNews(id, category) {
                 // Create a new row in the news table
                 const newNewsRow = newsTable.insertRow(-1);
                 newNewsRow.className = 'newsRow';
-                newNewsRow.insertCell(0).innerHTML = '<img src="' + thumbnail[0].textContent + '">';
+                newNewsRow.insertCell(0).innerHTML = '<img src="' + thumbnail[0].textContent.replace('http:', 'https:') + '">';
                 newNewsRow.insertCell(1).innerHTML = '<a href="' + newsUrl.innerHTML + '" target="_blank">' + title.innerHTML + '</a>';
                 newNewsRow.insertCell(2).textContent = publishedDate.innerHTML;
             });
